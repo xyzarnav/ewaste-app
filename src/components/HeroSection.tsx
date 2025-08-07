@@ -8,8 +8,8 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center bg-gradient-to-br from-background to-background-subtle overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 right-20 w-64 h-64 bg-eco-green/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-trust-blue/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-20 right-20 w-64 h-64 bg-eco-green/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-trust-blue/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -51,15 +51,15 @@ const HeroSection = () => {
             {/* Trust Indicators */}
             <div className="flex items-center space-x-8 pt-4">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary counter-glow">50K+</div>
+                <div className="text-2xl font-bold text-primary">50K+</div>
                 <div className="text-sm text-foreground-muted">Devices Recycled</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary counter-glow">1000+</div>
+                <div className="text-2xl font-bold text-primary">1000+</div>
                 <div className="text-sm text-foreground-muted">Happy Users</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary counter-glow">25</div>
+                <div className="text-2xl font-bold text-primary">25</div>
                 <div className="text-sm text-foreground-muted">Cities Covered</div>
               </div>
             </div>
@@ -75,13 +75,13 @@ const HeroSection = () => {
               />
               
               {/* Floating Elements */}
-              <div className="absolute -top-4 -left-4 bg-white p-3 rounded-xl shadow-lg float-animation">
+              <div className="absolute -top-4 -left-4 bg-white p-3 rounded-xl shadow-lg">
                 <Smartphone className="h-6 w-6 text-primary" />
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-white p-3 rounded-xl shadow-lg float-animation delay-500">
+              <div className="absolute -bottom-4 -right-4 bg-white p-3 rounded-xl shadow-lg">
                 <Laptop className="h-6 w-6 text-secondary" />
               </div>
-              <div className="absolute top-1/2 -right-6 bg-white p-3 rounded-xl shadow-lg float-animation delay-1000">
+              <div className="absolute top-1/2 -right-6 bg-white p-3 rounded-xl shadow-lg">
                 <Globe className="h-6 w-6 text-success" />
               </div>
             </div>
@@ -95,7 +95,7 @@ const HeroSection = () => {
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <div className="w-6 h-10 border-2 border-foreground-muted rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-foreground-muted rounded-full mt-2 animate-bounce"></div>
+          <div className="w-1 h-3 bg-foreground-muted rounded-full mt-2"></div>
         </div>
       </div>
     </section>

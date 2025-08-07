@@ -58,7 +58,7 @@ const HowItWorksSection = () => {
                 <div className="hidden lg:block absolute top-16 -right-4 w-8 h-0.5 bg-gradient-to-r from-primary to-primary/30 z-10"></div>
               )}
               
-              <Card className="p-6 h-full bg-surface border-0 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
+              <Card className="p-6 h-full bg-surface border-0 hover:shadow-lg transition-shadow">
                 <div className="space-y-4">
                   {/* Step Number */}
                   <div className="flex items-center justify-between">

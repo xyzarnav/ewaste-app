@@ -65,7 +65,7 @@ const WhoWeServeSection = () => {
           {userTypes.map((type, index) => (
             <Card 
               key={type.title} 
-              className="p-8 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border-0 bg-surface-elevated"
+              className="p-8 hover:shadow-lg transition-shadow border-0 bg-surface-elevated"
             >
               <div className="space-y-6">
                 {/* Icon */}
@@ -96,7 +96,7 @@ const WhoWeServeSection = () => {
                     className="w-full group"
                   >
                     {type.cta}
-                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="h-4 w-4" />
                   </Button>
                 </Link>
               </div>

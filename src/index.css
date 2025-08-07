@@ -155,10 +155,7 @@
     animation: float 3s ease-in-out infinite;
   }
   
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-  }
+/* Animations removed */
   
   /* Impact counter animation */
   .counter-glow {
