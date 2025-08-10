@@ -14,10 +14,14 @@ import LoginPage from "@/auth/pages/LoginPage";
 import RegisterPage from "@/auth/pages/RegisterPage";
 import ForgotPasswordPage from "@/auth/pages/ForgotPasswordPage";
 import ClientDashboard from "@/auth/pages/ClientDashboard";
-import AdminDashboard from "@/auth/pages/AdminDashboard";
+import AuthAdminDashboard from "@/auth/pages/AdminDashboard";
 import ManageClients from "@/admin/pages/ManageClients";
 import RegisterContact from "@/admin/pages/RegisterContact";
 import AdminClientDashboard from "@/admin/pages/ClientDashboard";
+import PartnerDashboard from "@/partner/pages/PartnerDashboard";
+import AdminDashboard from "@/admin/pages/AdminDashboard";
+import BatchItemsForm from "@/admin/pages/BatchItemsForm";
+import BatchDetail from "@/admin/pages/BatchDetail";
 
 const queryClient = new QueryClient();
 
@@ -39,8 +43,14 @@ const App = () => (
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
           <Route path="/client-dashboard" element={<ClientDashboard />} />
-          <Route path="/admin-dashboard" element={<AdminDashboard />} />
+          <Route path="/admin-dashboard" element={<AuthAdminDashboard />} />
+          {/* Partner routes */}
+          <Route path="/partner/dashboard" element={<PartnerDashboard />} />
+          
           {/* Admin feature routes */}
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route path="/admin/batch/:batchId" element={<BatchDetail />} />
+          <Route path="/admin/batch/:batchId/add-items" element={<BatchItemsForm />} />
           <Route path="/admin/manage-clients" element={<ManageClients />} />
           <Route path="/admin/register-contact" element={<RegisterContact />} />
           <Route path="/admin/client-dashboard" element={<AdminClientDashboard />} />

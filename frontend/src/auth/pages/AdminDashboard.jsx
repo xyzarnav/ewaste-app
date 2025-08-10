@@ -1,9 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
+import AdminBatchDashboard from '@/components/AdminBatchDashboard';
+import AdminItemForm from '@/components/AdminItemForm';
 
 export default function AdminDashboard() {
+  const [selectedBatch, setSelectedBatch] = useState(null);
+  const [view, setView] = useState('dashboard'); // 'dashboard' or 'items'
+
+  const handleBatchSelect = (batch) => {
+    setSelectedBatch(batch);
+    setView('items');
+  };
+
+  const handleSaveItems = (updatedBatch) => {
+    // TODO: Update the batch in the dashboard
+    console.log('Batch updated with items:', updatedBatch);
+    setView('dashboard');
+    setSelectedBatch(null);
+  };
+
+  const handleCancel = () => {
+    setView('dashboard');
+    setSelectedBatch(null);
+  };
+
+  if (view === 'items' && selectedBatch) {
+    return (
+      <AdminItemForm
+        batch={selectedBatch}
+        onSave={handleSaveItems}
+        onCancel={handleCancel}
+      />
+    );
+  }
+
   return (
-    <div className="flex flex-col min-h-screen justify-center items-center bg-gray-50">
-      <h2 className="text-2xl font-bold mb-6">Welcome, Admin!</h2>
-    </div>
+    <AdminBatchDashboard onBatchSelect={handleBatchSelect} />
   );
 }
